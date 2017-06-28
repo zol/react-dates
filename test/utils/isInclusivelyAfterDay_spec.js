@@ -3,10 +3,14 @@ import { expect } from 'chai';
 
 import isInclusivelyAfterDay from '../../src/utils/isInclusivelyAfterDay';
 
-const today = moment();
-const tomorrow = moment().add(1, 'days');
-
 describe('isInclusivelyAfterDay', () => {
+  let today;
+  let tomorrow;
+  beforeEach(() => {
+    today = moment();
+    tomorrow = moment().add(1, 'days');
+  });
+
   it('returns true if first argument is after the second', () => {
     expect(isInclusivelyAfterDay(tomorrow, today)).to.equal(true);
   });

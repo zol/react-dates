@@ -3,10 +3,14 @@ import { expect } from 'chai';
 
 import isAfterDay from '../../src/utils/isAfterDay';
 
-const today = moment();
-const tomorrow = moment().add(1, 'days');
-
 describe('isAfterDay', () => {
+  let today;
+  let tomorrow;
+  beforeEach(() => {
+    today = moment();
+    tomorrow = moment().add(1, 'days');
+  });
+
   it('returns true if first arg is after the second but have same month and year', () => {
     expect(isAfterDay(tomorrow, today)).to.equal(true);
   });

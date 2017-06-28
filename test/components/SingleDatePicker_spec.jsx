@@ -21,14 +21,17 @@ import toISOMonthString from '../../src/utils/toISOMonthString';
 import isSameDay from '../../src/utils/isSameDay';
 import * as isDayVisible from '../../src/utils/isDayVisible';
 
-// Set to noon to mimic how days in the picker are configured internally
-const today = moment().startOf('day').hours(12);
-
 function getCallsByModifier(stub, modifier) {
   return stub.getCalls().filter(call => call.args[call.args.length - 1] === modifier);
 }
 
 describe('SingleDatePicker', () => {
+  let today;
+  beforeEach(() => {
+    // Set to noon to mimic how days in the picker are configured internally
+    today = moment().startOf('day').hours(12);
+  });
+
   afterEach(() => {
     sinon.restore();
   });

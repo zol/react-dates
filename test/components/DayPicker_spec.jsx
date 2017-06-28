@@ -18,13 +18,14 @@ import {
   VERTICAL_SCROLLABLE,
 } from '../../constants';
 
-const today = moment();
 const event = { preventDefault() {}, stopPropagation() {} };
 
 describe('DayPicker', () => {
+  let today;
   beforeEach(() => {
     sinon.stub(DayPicker.prototype, 'adjustDayPickerHeight');
     sinon.stub(DayPicker.prototype, 'updateStateAfterMonthTransition');
+    today = moment();
   });
 
   afterEach(() => {

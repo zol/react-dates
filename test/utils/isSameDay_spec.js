@@ -3,10 +3,14 @@ import { expect } from 'chai';
 
 import isSameDay from '../../src/utils/isSameDay';
 
-const today = moment();
-const tomorrow = moment().add(1, 'days');
-
 describe('isSameDay', () => {
+  let today;
+  let tomorrow;
+  beforeEach(() => {
+    today = moment();
+    tomorrow = moment().add(1, 'days');
+  });
+
   it('returns true if args are the same day', () => {
     expect(isSameDay(today, today)).to.equal(true);
   });

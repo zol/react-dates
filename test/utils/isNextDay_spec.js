@@ -3,10 +3,14 @@ import { expect } from 'chai';
 
 import isNextDay from '../../src/utils/isNextDay';
 
-const today = moment();
-const tomorrow = moment().add(1, 'days');
-
 describe('isNextDay', () => {
+  let today;
+  let tomorrow;
+  beforeEach(() => {
+    today = moment();
+    tomorrow = moment().add(1, 'days');
+  });
+
   it('returns true if second argument is the next day after the first', () => {
     expect(isNextDay(today, tomorrow)).to.equal(true);
   });

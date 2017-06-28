@@ -4,11 +4,16 @@ import { expect } from 'chai';
 import isSameDay from '../../src/utils/isSameDay';
 import getCalendarMonthWeeks from '../../src/utils/getCalendarMonthWeeks';
 
-const today = moment();
-const weeks = getCalendarMonthWeeks(today);
-const weeksWithOutsideDays = getCalendarMonthWeeks(today, true);
-
 describe('getCalendarMonthWeeks', () => {
+  let today;
+  let weeks;
+  let weeksWithOutsideDays;
+  beforeEach(() => {
+    today = moment();
+    weeks = getCalendarMonthWeeks(today);
+    weeksWithOutsideDays = getCalendarMonthWeeks(today, true);
+  });
+
   it('returns an array of arrays', () => {
     expect(weeks).to.be.instanceof(Array);
 

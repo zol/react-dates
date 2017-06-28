@@ -3,10 +3,14 @@ import { expect } from 'chai';
 
 import isBeforeDay from '../../src/utils/isBeforeDay';
 
-const today = moment();
-const tomorrow = moment().add(1, 'days');
-
 describe('isBeforeDay', () => {
+  let today;
+  let tomorrow;
+  beforeEach(() => {
+    today = moment();
+    tomorrow = moment().add(1, 'days');
+  });
+
   it('returns true if first arg is before the second but have same month and year', () => {
     expect(isBeforeDay(today, tomorrow)).to.equal(true);
   });

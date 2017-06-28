@@ -3,10 +3,14 @@ import { expect } from 'chai';
 
 import isInclusivelyBeforeDay from '../../src/utils/isInclusivelyBeforeDay';
 
-const today = moment();
-const tomorrow = moment().add(1, 'days');
-
 describe('isInclusivelyBeforeDay', () => {
+  let today;
+  let tomorrow;
+  beforeEach(() => {
+    today = moment();
+    tomorrow = moment().add(1, 'days');
+  });
+
   it('returns true if first argument is before the second', () => {
     expect(isInclusivelyBeforeDay(today, tomorrow)).to.equal(true);
   });

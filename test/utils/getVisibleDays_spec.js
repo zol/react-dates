@@ -4,9 +4,12 @@ import { expect } from 'chai';
 import isSameDay from '../../src/utils/isSameDay';
 import getVisibleDays from '../../src/utils/getVisibleDays';
 
-const today = moment();
-
 describe('getVisibleDays', () => {
+  let today;
+  beforeEach(() => {
+    today = moment();
+  });
+
   it('has numberOfMonths entries', () => {
     const numberOfMonths = 3;
     const visibleDays = getVisibleDays(today, numberOfMonths, false);
