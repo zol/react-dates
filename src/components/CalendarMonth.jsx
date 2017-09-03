@@ -182,7 +182,7 @@ CalendarMonth.defaultProps = defaultProps;
 
 export default withStyles(({ color }) => ({
   CalendarMonth: {
-    background: color.core.white,
+    background: color.background,
     textAlign: 'center',
     padding: '0 13px',
     verticalAlign: 'top',
@@ -217,7 +217,7 @@ export default withStyles(({ color }) => ({
   },
 
   CalendarMonth_caption: {
-    color: color.core.gray,
+    color: color.textColor,
     marginTop: 7,
     fontSize: 18,
     textAlign: 'center',
