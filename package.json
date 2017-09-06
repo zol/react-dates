@@ -93,7 +93,7 @@
     "react-dom": "^0.14 || ^15.5.4",
     "react-svg-loader": "^1.1.1",
     "react-test-renderer": "^15.6.1",
-    "react-with-styles-interface-aphrodite": "^2.0.1",
+    "react-with-styles-interface-aphrodite": "^1.2.0",
     "rimraf": "^2.6.1",
     "safe-publish-latest": "^1.1.1",
     "sass-loader": "^6.0.6",
