@@ -1,3 +1,4 @@
+import 'react-chromatic/storybook-addon';
 import React from 'react';
 import moment from 'moment';
 import { configure, addDecorator, setAddon } from '@storybook/react';
